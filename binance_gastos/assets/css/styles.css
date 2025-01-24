@@ -1,0 +1,242 @@
+/* Colores de la paleta */
+:root {
+    --color-azul-oscuro: #0A1828;
+    --color-turquesa: #178582;
+    --color-dorado: #BFA181;
+    --color-blanco: #FFFFFF;
+    --color-gris-claro: #F5F5F5;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--color-azul-oscuro);
+    background-color: var(--color-azul-oscuro);
+}
+
+/* Estilos específicos para index.html */
+.index-body {
+    background-color: var(--color-azul-oscuro);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-position: left center;
+}
+
+.content-container {
+    width: 50%;
+    text-align: center;
+}
+
+.links-container {
+    margin-top: 20px;
+}
+
+.links-container a {
+    background-color: var(--color-turquesa);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.links-container a:hover {
+    background-color: var(--color-dorado);
+}
+
+/* Estilos específicos para el resto de las páginas */
+.default-body {
+    background-color: var(--color-blanco);
+}
+
+header {
+    background-color: var(--color-azul-oscuro);
+    color: var(--color-blanco);
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: var(--color-dorado);
+}
+
+button {
+    background-color: var(--color-turquesa);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, a:hover {
+    background-color: var(--color-dorado);
+}
+a {
+    background-color: var(--color-azul-oscuro);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--color-azul-oscuro);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form {
+    background-color: var(--color-blanco);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--color-blanco);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: var(--color-azul-oscuro);
+    padding: 10px;
+    text-align: center;
+}
+
+nav button {
+    background-color: var(--color-turquesa);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: var(--color-dorado);
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--color-gris-claro);
+}
+
+.transaction-item p {
+    margin: 0;
+}
+
+.transaction-item button {
+    background-color: var(--color-turquesa);
+    color: var(--color-blanco);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.transaction-item button:hover {
+    background-color: var(--color-dorado);
+}
+
+#balances-chart {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 60vh; 
+    max-width: 800px; 
+    margin: 0 ; 
+}
+
+img {
+    height: 50px; 
+    width: auto; 
+}
+.group-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.group-item a {
+    margin-right: 10px;
+}
+
+.group-item button {
+    margin-left: 10px;
+}
+
+.members-container {
+    display: none;
+    margin-top: 10px;
+    padding-left: 20px;
+    width: 100%; /* Ensure it takes the full width */
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    header, nav, section {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .transaction-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .transaction-item button {
+        margin-top: 10px;
+    }
+}

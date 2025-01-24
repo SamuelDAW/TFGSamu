@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Binance</h1>
+        <button id="logoutBtn">Cerrar sesión</button>
+    </header>
+
+    <section id="user-info">
+        <h2>Información del Usuario</h2>
+        <p id="userName"></p>
+    </section>
+ <!-- Formulario para editar grupo -->
+    <section id="edit-group-form" style="display: none;">
+        <h2>Editar Nombre del Grupo</h2>
+        <form id="editGroupForm">
+            <input type="hidden" id="editGroupId">
+            <input type="text" id="editGroupNameInput" placeholder="Nuevo nombre del grupo" required>
+            <button type="submit">Guardar</button>
+            <button type="button" id="cancelEditGroupBtn">Cancelar</button>
+        </form>
+    </section>
+    <section id="groups">
+        <h2>Mis Grupos</h2>
+        <div id="groups-list"></div>
+        <button id="createGroupBtn">Crear Nuevo Grupo</button>
+        <button id="joinGroupBtn">Unirse a un Grupo</button>
+    </section>
+    
+
+    <!-- Formulario para crear grupo -->
+    <section id="create-group-form" style="display: none;">
+        <h2>Crear Nuevo Grupo</h2>
+        <form id="groupForm">
+            <input type="text" id="groupNameInput" placeholder="Nombre del grupo" required>
+            <button type="submit">Aceptar</button>
+            <button type="button" id="cancelGroupBtn">Cancelar</button>
+        </form>
+    </section>
+
+    <!-- Formulario para unirse a grupo -->
+    <section id="join-group-form" style="display: none;">
+        <h2>Unirse a un Grupo Existente</h2>
+        <form id="joinGroupForm">
+            <input type="text" id="invitationCodeInput" placeholder="Código de invitación" required>
+            <button type="submit">Unirse</button>
+            <button type="button" id="cancelJoinGroupBtn">Cancelar</button>
+        </form>
+    </section>
+
+    <!-- Contenedor para mostrar los miembros del grupo -->
+    <section id="members-section" style="display: none;">
+        <div id="members-container"></div>
+        <button type="button" id="hideMembersBtn">Ocultar Miembros</button>
+    </section>
+
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
